@@ -19,15 +19,16 @@ class Controller_Admin_Index extends Controller_Admin_Base {
 	$this->template->title = 'Админисртрирование';
 	$this->template->page_title = 'Панель управления';
 
-	$this->template->scripts = array('js/bootstrap.min.js',
-	    'js/jquery.MultiFile.pack.js',
-	    'js/upload.js',
-	    'js/jquery.autocomplete.js',
-	    'js/view_images.js',
-	    'js/lib/functions.js',
-	    'js/admin/common.js',
-	    'js/admin/controllers.js',
-	    'js/admin/model.js',
+	$this->template->scripts = array(
+            'media/js/bootstrap.min.js',
+	    'media/js/jquery.MultiFile.pack.js',
+	    'media/js/upload.js',
+	    'media/js/jquery.autocomplete.js',
+	    'media/js/view_images.js',
+	    'media/js/lib/functions.js',
+	    'media/js/admin/common.js',
+	    'media/js/admin/controllers.js',
+	    'media/js/admin/model.js',
 	);
     }
 

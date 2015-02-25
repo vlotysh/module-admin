@@ -1,14 +1,8 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-echo 'admin!';
+ define('MODULE_PATH', '/modules/admin/');
 
-Route::set('auth', '<action>', array('action'=>'(login|logout|register)'))
-	->defaults(array(
-		'directory'  => 'admin',
-		'controller' => 'auth',
-		'action'     => 'login',
-	));  
- 
+
 
 Route::set('admin', 'admin(/<controller>(/<action>(/page<page>)(/<id>)))')
 	->defaults(array(   

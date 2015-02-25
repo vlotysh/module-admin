@@ -1,8 +1,31 @@
-<?php defined('SYSPATH') or die('No direct script access.');
+<?php
 
-class Model_Page extends Model {
+defined('SYSPATH') or die('No direct script access.');
 
-	public function page($alias){
-	return $row = $query = DB::query(Database::SELECT, "select * from pages where page_status=1 and page_alias='$alias'")->execute();
-	}
+class Model_Page extends ORM_MPTT {
+
+    protected $_table_name = 'pages';
+    protected $_primary_key = 'id';
+    protected $_db_group = 'default';
+
+    public function labels() {
+        return array(
+            'page_title' => 'Название страницы',
+            'url' => 'Путь к странице'
+        );
+    }
+
+    public function rules() {
+        return array(
+            'page_title' => array(
+                array('not_empty'),
+                array(array($this, 'unique'), array('page_title', ':value')),
+            ),
+            'url' => array(
+                array('not_empty'),
+            ),
+        );
+    }
+
+
 }

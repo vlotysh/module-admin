@@ -3,14 +3,14 @@
     <head>
         <title>Панель управления TopCommerce CMS</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="/css/bootstrap.css" rel="stylesheet" media="screen">
-        <link href="/css/bootstrap-responsive.css" rel="stylesheet">
-        <link href="/css/admin-styles.css" rel="stylesheet">
+        <link href="/media/css/bootstrap.css" rel="stylesheet" media="screen">
+        <link href="/media/css/bootstrap-responsive.css" rel="stylesheet">
+        <link href="/media/css/admin-styles.css" rel="stylesheet">
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="//code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
-	<? foreach ($scripts as $file_script): ?>
+	<?php foreach ($scripts as $file_script): ?>
 	    <?= HTML::script($file_script) ?>
-	<? endforeach ?>
+	<?php endforeach ?>
         <base href="http://<?= $_SERVER['HTTP_HOST']; ?>/admin/">
     </head>
 
@@ -51,7 +51,25 @@
                         <!--/.navbar-inner -->
                     </div>
                     <!--/.navbar -->
+<div role="tabpanel">
 
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home">1</div>
+    <div role="tabpanel" class="tab-pane" id="profile">2</div>
+    <div role="tabpanel" class="tab-pane" id="messages">3</div>
+    <div role="tabpanel" class="tab-pane" id="settings">4</div>
+  </div>
+
+</div>
                 </div>
             </div>
 
