@@ -7,7 +7,7 @@ if(isset($errors)){
 ?>
 <div>
 	<form method="post" action=""><br>
-	<label>Название групы меню: </label>
+	<label>Название группы меню: </label>
 	<input type="text" name="menu_group_title" value="<?=$data['menu_group_title']?>" />
 	<label>Пазиция групы меню: </label>
 	<select name="menu_group_position">
@@ -15,6 +15,6 @@ if(isset($errors)){
 	<option value="block_left">Влок левый</option>
 	<option value="block_right">Влок правый</option>
 	</select><br><br>
-	<input class="btn btn-success" type="submit" name="submit" value="  Сахранить " />
+	<input class="btn btn-success" type="submit" name="submit" value="  Сохранить " />
 	</form>
 </div>
